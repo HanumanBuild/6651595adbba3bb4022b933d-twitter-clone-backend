@@ -14,4 +14,7 @@ router.post('/tweets', authMiddleware, tweetController.createTweet);
 router.get('/tweets', tweetController.getTweets);
 router.delete('/tweets/:id', authMiddleware, tweetController.deleteTweet);
 
+// User profile route
+router.get('/users/:username', authController.getUserProfile);
+
 module.exports = router;
